@@ -8,4 +8,4 @@ My personal website made with:
 
 ## License
 
-Mit
+MIT
