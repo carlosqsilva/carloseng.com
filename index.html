@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91624555-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-91624555-2');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="shortcut icon" href="./favicon.png">
+
+  <meta name="author" content="Carlos Henrique Silva">
+  <!-- APPLE web app meta -->
+  <link rel="apple-touch-icon" href="./icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <title>Carlos Silva</title>
+  <meta name="description" content="Carlos Silva Engenheiro de Produção e Pós-graduando em Engenharia de Software.">
+  <meta name="keywords" content="Carlos, Desenvolvedor, Engenharia, React, Javascript">
+  <!-- Facebook Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carloseng.com">
+  <meta property="og:title" content="Carlos Henrique Silva">
+  <meta property="og:image" content="./icon.png">
+  <meta property="og:description" content="Carlos Silva Engenheiro de Produção e Pós-graduando em Engenharia de Software.">
+  <meta property="og:site_name" content="Carlos Silva Website">
+  <meta property="og:locale" content="pt_BR">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+  <style type="text/css">
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+      backface-visibility: hidden;
+    }
+
+    body {
+      padding: 0;
+      font-family: 'Roboto Mono', monospace, Arial, Helvetica, Verdana, Geneva, sans-serif;
+      font-size: 16px;
+    }
+
+    #loader.ready {
+      opacity: 0;
+    }
+
+    #loader {
+      background-color: #f5f5f5;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      -webkit-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+      -moz-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+      transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+      z-index: 9999;
+    }
+
+    .loader {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .loader:before,
+    .loader:after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 10px);
+      background-color: #FF6700;
+      animation: squaremove 1s ease-in-out infinite;
+    }
+
+    .loader:after {
+      bottom: 0;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes squaremove {
+      0%,
+      100% {
+        -webkit-transform: translate(0, 0) rotate(0);
+        -ms-transform: translate(0, 0) rotate(0);
+        -o-transform: translate(0, 0) rotate(0);
+        transform: translate(0, 0) rotate(0);
+      }
+
+      25% {
+        -webkit-transform: translate(40px, 40px) rotate(45deg);
+        -ms-transform: translate(40px, 40px) rotate(45deg);
+        -o-transform: translate(40px, 40px) rotate(45deg);
+        transform: translate(40px, 40px) rotate(45deg);
+      }
+
+      50% {
+        -webkit-transform: translate(0px, 80px) rotate(0deg);
+        -ms-transform: translate(0px, 80px) rotate(0deg);
+        -o-transform: translate(0px, 80px) rotate(0deg);
+        transform: translate(0px, 80px) rotate(0deg);
+      }
+
+      75% {
+        -webkit-transform: translate(-40px, 40px) rotate(45deg);
+        -ms-transform: translate(-40px, 40px) rotate(45deg);
+        -o-transform: translate(-40px, 40px) rotate(45deg);
+        transform: translate(-40px, 40px) rotate(45deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <script src="./src/index.js"></script>
+</body>
+
+</html>

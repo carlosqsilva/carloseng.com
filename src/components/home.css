@@ -1,0 +1,78 @@
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
+  padding: 0 10px;
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+  background: linear-gradient(to bottom, transparent 70%, #111111),
+    url("../assets/graph-paper.svg");
+  background-size: cover, 200px;
+}
+
+.container {
+  grid-column: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.name {
+  position: relative;
+  align-self: flex-start;
+  font-size: calc(2rem + 2vw);
+  color: white;
+  margin: 0 0 1.2em 0;
+  padding: 0 0 15px 0;
+}
+.name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 8px;
+  width: calc(100px + 1vw);
+  display: block;
+  background-color: white;
+  transition: all 300ms ease;
+}
+.name:hover:after {
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+.description {
+  font-size: calc(1rem + 1vw);
+  color: white;
+  margin: 0;
+  line-height: 1.4em;
+  margin-bottom: 1.5em;
+}
+
+.social {
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.social > a {
+  text-decoration: none;
+  font-size: calc(1rem + 0.5vw);
+  font-weight: 700;
+  color: #097cf3;
+  margin-right: 20px;
+}

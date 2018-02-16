@@ -1,2 +1,11 @@
 # carloseng.com
-My personal website
+
+My personal website made with:
+
+* Preact
+* Css Modules
+* Parcel bundler
+
+## License
+
+Mit
