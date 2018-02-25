@@ -8,7 +8,7 @@ const projects = {
       name: "YASCC",
       description: "YASCC is a soundcloud music player",
       link: "https://carlosqsilva.github.io/YASCC/#/",
-      tech: "React Redux React-Router",
+      tech: "Preact Redux React-Router",
       shot: screen3
     },
     {
