@@ -1,29 +1,51 @@
 import { h, render, Component } from "preact"
-import Home from "./components/Home"
-import Projects from "./components/Projects"
 import "normalize.css"
+import "./index.css"
+import Home from "./components/Hero"
+import Projects from "./components/Projects"
+import Footer from "./components/Footer/footer"
 
 class App extends Component {
-  componentDidMount() {
-    const ele = document.getElementById("loader")
-    if (ele) {
-      setTimeout(() => {
-        ele.classList.add("ready")
-        setTimeout(() => {
-          ele.outerHTML = ""
-        }, 800)
-      }, 500)
-    }
+  state = {
+    language: "en"
   }
 
-  render() {
+  componentDidMount() {
+    window.addEventListener("load", () => {
+      const ele = document.getElementById("loader")
+      if (ele) {
+        setTimeout(() => {
+          ele.classList.add("ready")
+          setTimeout(() => {
+            ele.outerHTML = ""
+          }, 500)
+        }, 500)
+      }
+    })
+  }
+
+  onclick = () => {
+    this.setState(prevState => ({
+      language: prevState.language === "en" ? "pt" : "en"
+    }))
+  }
+
+  render(_, { language }) {
     return (
-      <div>
-        <Home />
-        <Projects />
+      <div style={{ overflow: "hidden" }}>
+        <Home lang={language} onClick={this.onclick} />
+        <Projects lang={language} />
+        <Footer lang={language} />
       </div>
     )
   }
 }
 
 render(<App />, document.body)
+
+if (module.hot) {
+  module.hot.accept(function() {
+    window.location.reload()
+  })
+  require("preact/devtools")
+}

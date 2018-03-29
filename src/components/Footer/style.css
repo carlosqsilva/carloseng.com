@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  padding: 10px;
+  overflow: auto;
+  background: #282b2e;
+  color: var(--text-grey);
+  text-align: center;
+}
+
+.content > a {
+  text-decoration: none;
+  color: var(--text-info);
+}

@@ -1,22 +1,24 @@
 import { h } from "preact"
-import { videowebm, videomp4 } from "../assets"
-import style from "./home.css"
+import { videowebm, videomp4 } from "../../assets"
+import { LanguageHero } from "../language"
+import LanguageToggler from "../LangButton"
+import { DividerArrow } from "../Divider"
+import style from "./hero.css"
 
-const Home = () => {
+const Home = ({ lang, onClick }) => {
+  const { cta, description } = LanguageHero[lang]
   return (
-    <section class={style.intro}>
+    <section class={style.hero}>
+      <LanguageToggler onClick={onClick} lang={lang} />
       <video autoPlay="true" loop>
         <source src={videowebm} type="video/webm" />
         <source src={videomp4} type="video/mp4" />
       </video>
 
       <div class={style.container}>
-        <h1 class={style.name}>CARLOS SILVA</h1>
+        <h1 class={style.name}>{cta}</h1>
 
-        <p class={style.description}>
-          I'm 24 years old, from Brazil. I have a bachelor degree in Production
-          Engineering and getting a major in software engineering.
-        </p>
+        <p class={style.description}>{description}</p>
 
         <div class={style.social}>
           <a
@@ -42,6 +44,7 @@ const Home = () => {
           </a>
         </div>
       </div>
+      <DividerArrow />
     </section>
   )
 }

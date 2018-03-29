@@ -1,0 +1,9 @@
+{
+    "modules": true,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": ["Chrome >= 60", "Firefox >= 55"],
+        "flexbox": "no-2009"
+      }
+    }
+  }

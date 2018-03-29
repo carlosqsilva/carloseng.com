@@ -1,0 +1,6 @@
+.project {
+  padding: 2rem 0;
+  position: relative;
+  background: url("../../assets/project_bg.svg"), #111;
+  background-size: 200px;
+}

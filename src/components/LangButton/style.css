@@ -1,0 +1,15 @@
+.wrapper {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.wrapper:hover {
+  background: #fff;
+}

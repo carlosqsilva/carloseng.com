@@ -14,15 +14,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
-
   <link rel="shortcut icon" href="./favicon.png">
-
   <meta name="author" content="Carlos Henrique Silva">
-  <!-- APPLE web app meta -->
-  <link rel="apple-touch-icon" href="./icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
   <title>Carlos Silva</title>
   <meta name="description" content="Carlos Silva Engenheiro de Produção e Pós-graduando em Engenharia de Software.">
   <meta name="keywords" content="Carlos, Desenvolvedor, Engenharia, React, Javascript">
@@ -34,19 +27,23 @@
   <meta property="og:description" content="Carlos Silva Engenheiro de Produção e Pós-graduando em Engenharia de Software.">
   <meta property="og:site_name" content="Carlos Silva Website">
   <meta property="og:locale" content="pt_BR">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:100,400,700" rel="stylesheet">
   <style type="text/css">
     *,
-    *:before,
-    *:after {
+    *::before,
+    *::after {
+      padding: 0;
       box-sizing: border-box;
       backface-visibility: hidden;
+      font-family: inherit;
     }
 
     body {
-      padding: 0;
-      font-family: 'Roboto Mono', monospace, Arial, Helvetica, Verdana, Geneva, sans-serif;
+      margin: 0;
+      font-family: 'Space Mono', sans-serif;
+      font-variant-ligatures: no-common-ligatures;
       font-size: 16px;
+      overflow-x: hidden;
     }
 
     #loader.ready {
@@ -66,8 +63,6 @@
       justify-content: center;
       align-items: center;
       pointer-events: none;
-      -webkit-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
-      -moz-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
       transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
       z-index: 9999;
     }
@@ -80,8 +75,8 @@
       margin: 0 auto;
     }
 
-    .loader:before,
-    .loader:after {
+    .loader::before,
+    .loader::after {
       content: "";
       width: 20px;
       height: 20px;
@@ -92,7 +87,7 @@
       animation: squaremove 1s ease-in-out infinite;
     }
 
-    .loader:after {
+    .loader::after {
       bottom: 0;
       animation-delay: 0.5s;
     }
@@ -100,30 +95,18 @@
     @keyframes squaremove {
       0%,
       100% {
-        -webkit-transform: translate(0, 0) rotate(0);
-        -ms-transform: translate(0, 0) rotate(0);
-        -o-transform: translate(0, 0) rotate(0);
         transform: translate(0, 0) rotate(0);
       }
 
       25% {
-        -webkit-transform: translate(40px, 40px) rotate(45deg);
-        -ms-transform: translate(40px, 40px) rotate(45deg);
-        -o-transform: translate(40px, 40px) rotate(45deg);
         transform: translate(40px, 40px) rotate(45deg);
       }
 
       50% {
-        -webkit-transform: translate(0px, 80px) rotate(0deg);
-        -ms-transform: translate(0px, 80px) rotate(0deg);
-        -o-transform: translate(0px, 80px) rotate(0deg);
         transform: translate(0px, 80px) rotate(0deg);
       }
 
       75% {
-        -webkit-transform: translate(-40px, 40px) rotate(45deg);
-        -ms-transform: translate(-40px, 40px) rotate(45deg);
-        -o-transform: translate(-40px, 40px) rotate(45deg);
         transform: translate(-40px, 40px) rotate(45deg);
       }
     }

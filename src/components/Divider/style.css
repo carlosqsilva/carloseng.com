@@ -1,0 +1,46 @@
+.divider {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--text-grey),
+    transparent
+  );
+}
+
+.arrow::after,
+.stopper::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -6px;
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+}
+
+.arrow::after {
+  background-color: #111;
+  transform: rotate(45deg);
+  border-bottom: 1px solid var(--text-grey);
+  border-right: 1px solid var(--text-grey);
+}
+
+.stopper::after {
+  border-left: 1px solid var(--text-grey);
+  border-right: 1px solid var(--text-grey);
+}

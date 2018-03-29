@@ -4,10 +4,11 @@
       "env",
       {
         "targets": {
-          "browsers": ["> 5%", "last 2 versions", "Firefox ESR", "not ie <= 9"]
+          "browsers": ["Chrome >= 60", "Firefox >= 55"]
         },
         "debug": true
       }
     ]
-  ]
+  ],
+  "plugins": ["transform-class-properties"]
 }
