@@ -3,45 +3,28 @@ import { videowebm, videomp4 } from "../../assets"
 import { LanguageHero } from "../language"
 import LanguageToggler from "../LangButton"
 import { DividerArrow } from "../Divider"
-import style from "./hero.css"
+import { Link } from "../Miscellaneous/link"
+import st from "./style.css"
 
 const Home = ({ lang, onClick }) => {
   const { cta, description } = LanguageHero[lang]
   return (
-    <section class={style.hero}>
+    <section class={st.hero}>
       <LanguageToggler onClick={onClick} lang={lang} />
       <video autoPlay="true" loop>
         <source src={videowebm} type="video/webm" />
         <source src={videomp4} type="video/mp4" />
       </video>
 
-      <div class={style.container}>
-        <h1 class={style.name}>{cta}</h1>
+      <div class={st.container}>
+        <h1 class={st.name}>{cta}</h1>
 
-        <p class={style.description}>{description}</p>
+        <p class={st.description}>{description}</p>
 
-        <div class={style.social}>
-          <a
-            href="https://github.com/carlosqsilva"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-          <a
-            href="https://www.linkedin.com/in/carlosqsilva"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Linkedin
-          </a>
-          <a
-            href="mailto:carlosqsilva@outlook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Email
-          </a>
+        <div class={st.social}>
+          <Link href="https://github.com/carlosqsilva">Github</Link>
+          <Link href="https://www.linkedin.com/in/carlosqsilva">Linkedin</Link>
+          <Link href="mailto:carlosqsilva@outlook.com">Email</Link>
         </div>
       </div>
       <DividerArrow />

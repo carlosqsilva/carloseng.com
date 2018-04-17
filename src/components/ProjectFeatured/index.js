@@ -1,42 +1,28 @@
 import { h } from "preact"
-import style from "./style.css"
+import { Link } from "../Miscellaneous/link"
+import st from "./style.css"
 
-const Featured = ({ project, lang }) => {
-  const isEng = lang === "en"
-  return (
-    <div class={style.container}>
-      <div class={style.left}>
-        <h3 class={style.section}>
-          {isEng ? "Recent Project" : "Último Projeto"}
-        </h3>
-        <h1 class={style.title}>{project.name}</h1>
-        <div>
-          {project.tech.map((tech, i) => (
-            <span class={style.tech} key={i}>
-              {tech}
-            </span>
-          ))}
-        </div>
-        <p class={style.description}>{project.description}</p>
-        <a
-          class={style.link}
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {isEng ? "Check it here" : "Acesse aqui"}
-        </a>
+const Featured = ({ project, lang }) => (
+  <div class={st.container}>
+    <div class={st.left}>
+      <h3 class={st.section}>{lang ? "Recent Project" : "Último Projeto"}</h3>
+      <h1 class={st.title}>{project.name}</h1>
+      <div>
+        {project.tech.map((tech, i) => (
+          <span class={st.tech} key={i}>
+            {tech}
+          </span>
+        ))}
       </div>
-      <a
-        class={style.right}
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img class={style.image} src={project.image} alt="" />
-      </a>
+      <p class={st.description}>{project.description}</p>
+      <Link class={st.link} href={project.link}>
+        {lang ? "Check it here" : "Acesse aqui"}
+      </Link>
     </div>
-  )
-}
+    <Link class={st.right} href={project.link}>
+      <img class={st.image} src={project.image} alt="" />
+    </Link>
+  </div>
+)
 
 export default Featured

@@ -1,23 +1,24 @@
 import { h } from "preact"
-import style from "./style.css"
+import { Link } from "../Miscellaneous/link"
+import st from "./style.css"
 
 const Card = ({ link, name, description, tech }) => (
-  <a class={style.card} href={link} target="_blank" rel="noopener noreferrer">
-    <h3 class={style.title}>{name}</h3>
+  <Link class={st.card} href={link}>
+    <h3 class={st.title}>{name}</h3>
     {tech &&
       tech.map((t, i) => (
-        <span class={style.tech} key={i}>
+        <span class={st.tech} key={i}>
           {t}
         </span>
       ))}
-    <p class={style.description}>{description}</p>
-  </a>
+    <p class={st.description}>{description}</p>
+  </Link>
 )
 
-const Other = ({ projects }) => (
-  <div class={style.wrapper}>
-    <h3 class={style.section}>Other Projects</h3>
-    <div class={style.card_container}>
+const Other = ({ projects, lang }) => (
+  <div class={st.wrapper}>
+    <h3 class={st.section}>{lang ? "Other Projects" : "Outros Projetos"}</h3>
+    <div class={st.card_container}>
       {projects.map((project, i) => <Card {...project} key={i} />)}
     </div>
   </div>

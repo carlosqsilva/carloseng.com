@@ -1,6 +1,6 @@
 import { h, render, Component } from "preact"
 import "normalize.css"
-import "./index.css"
+import "./main.css"
 import Home from "./components/Hero"
 import Projects from "./components/Projects"
 import Footer from "./components/Footer/footer"
@@ -32,11 +32,11 @@ class App extends Component {
 
   render(_, { language }) {
     return (
-      <div style={{ overflow: "hidden" }}>
+      <main style={{ overflow: "hidden" }}>
         <Home lang={language} onClick={this.onclick} />
         <Projects lang={language} />
         <Footer lang={language} />
-      </div>
+      </main>
     )
   }
 }

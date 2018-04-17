@@ -3,12 +3,16 @@
     [
       "env",
       {
+        "modules": false,
+        "useBuiltIns": true,
         "targets": {
           "browsers": ["Chrome >= 60", "Firefox >= 55"]
-        },
-        "debug": true
+        }
       }
     ]
   ],
-  "plugins": ["transform-class-properties"]
+  "plugins": [
+    "transform-class-properties",
+    ["transform-object-rest-spread", { "useBuiltIns": true }]
+  ]
 }
