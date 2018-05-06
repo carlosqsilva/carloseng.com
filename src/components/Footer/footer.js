@@ -1,28 +1,37 @@
 import { h } from "preact"
-import { Link } from "../Miscellaneous/link"
-import style from "./style.css"
+import styled from "styled-components"
+import { Info } from "../Miscellaneous/link"
 
 const Github = "https://github.com/carlosqsilva/carloseng.com"
 const Preact = "https://github.com/developit/preact"
-const Parcel = "https://github.com/parcel-bundler/parcel"
+const Styled = "https://github.com/styled-components/styled-components"
 
 const Footer = ({ lang }) => (
-  <footer class={style.footer}>
+  <Section>
     {lang === "en" ? (
-      <p class={style.content}>
-        Made by Carlos Silva with <Link href={Preact}>Preact</Link> and{" "}
-        <Link href={Parcel}>Parceljs</Link>. Code available on{" "}
-        <Link href={Github}>Github</Link>.
+      <p>
+        Made by Carlos Silva with <Info href={Preact}>Preact</Info> and{" "}
+        <Info href={Styled}>Styled Components</Info>. Code available on{" "}
+        <Info href={Github}>Github</Info>.
       </p>
     ) : (
-      <p class={style.content}>
-        Feito por Carlos Silva com <Link href={Preact}>Preact</Link> e{" "}
-        <Link href={Parcel}>Parceljs</Link>. Código disponível no{" "}
-        <Link href={Github}>Github</Link>.
+      <p>
+        Feito por Carlos Silva com <Info href={Preact}>Preact</Info> e{" "}
+        <Info href={Styled}>Styled Components</Info>. Código disponível no{" "}
+        <Info href={Github}>Github</Info>.
       </p>
     )}
     <p>MIT License</p>
-  </footer>
+  </Section>
 )
+
+const Section = styled.footer`
+  width: 100%;
+  padding: 10px;
+  overflow: auto;
+  background: #282b2e;
+  color: ${props => props.theme.grey};
+  text-align: center;
+`
 
 export default Footer

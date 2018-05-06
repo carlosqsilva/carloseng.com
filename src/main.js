@@ -1,9 +1,19 @@
 import { h, render, Component } from "preact"
-import "normalize.css"
-import "./main.css"
+import { ThemeProvider } from "styled-components"
 import Home from "./components/Hero"
 import Projects from "./components/Projects"
 import Footer from "./components/Footer/footer"
+import Toggler from "./components/LangToggler"
+
+const theme = {
+  link: "#097cf3",
+  info: "#ebca7d",
+  black: "#111",
+  dark: "#212121",
+  red: "#f44336",
+  light: "#fafafa",
+  grey: "#eeeeee"
+}
 
 class App extends Component {
   state = {
@@ -32,11 +42,14 @@ class App extends Component {
 
   render(_, { language }) {
     return (
-      <main style={{ overflow: "hidden" }}>
-        <Home lang={language} onClick={this.onclick} />
-        <Projects lang={language} />
-        <Footer lang={language} />
-      </main>
+      <ThemeProvider theme={theme}>
+        <main style={{ overflow: "hidden" }}>
+          <Toggler lang={language} onClick={this.onclick} />
+          <Home lang={language} onClick={this.onclick} />
+          <Projects lang={language} />
+          <Footer lang={language} />
+        </main>
+      </ThemeProvider>
     )
   }
 }
@@ -47,5 +60,4 @@ if (module.hot) {
   module.hot.accept(function() {
     window.location.reload()
   })
-  require("preact/devtools")
 }

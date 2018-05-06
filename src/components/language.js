@@ -18,7 +18,7 @@ export const LanguageProject = {
     last: {
       name: "YASCC",
       description:
-        "Yet Another SoundCloud Client é um tocador de música qua utiliza a API do SoundCloud, feito em Preact e Redux, o mesmo também utiliza localStorage através do redux-persist para salvar playlists criado pelo usuário, outro destaque é o uso de Media Session API para fornecer integração com smartphones androids na tela de bloqueio.",
+        "Yet Another SoundCloud Client é um tocador de música feito em Preact e Redux, o mesmo utiliza localStorage através do redux-persist para salvar playlists criadas pelo usuário, outro destaque é o uso de Media Session API para fornecer integração com smartphones androids na tela de bloqueio.",
       link: "https://carlosqsilva.github.io/YASCC/#/",
       tech: ["Preact", "Redux", "React-Router"],
       image: screen
@@ -26,13 +26,15 @@ export const LanguageProject = {
     other: [
       {
         name: "CCharts",
-        description: "Plota gráficos de controle de qualidade.",
+        description:
+          "Plota gráficos de controle de qualidade no navegador, usando arquivos csv.",
         link: "https://carlosqsilva.github.io/ccharts-online/",
         tech: ["React", "Redux", "Chartjs"]
       },
       {
         name: "APOD",
-        description: "Utilização da API APOD.",
+        description:
+          "Exibição de imagens/fotografias do espaço, usando a API APOD.",
         link: "https://carlosqsilva.github.io/Astronomy-Picture-of-the-Day/",
         tech: ["Vuejs", "Bulma"]
       },
@@ -62,7 +64,7 @@ export const LanguageProject = {
     last: {
       name: "YASCC",
       description:
-        "Yet Another SoundCloud Client is a pwa SoundCloud client music player, built with Preact and Redux, it also uses localStorage through redux-persist to persist user created playlist, other highlight is the usage of Media Session API to give a cool integration with Android devices.",
+        "Yet Another SoundCloud Client is a music player, built with Preact and Redux, it uses localStorage through redux-persist to persist user created playlist, other highlight is the usage of Media Session API to give a cool integration with Android devices.",
       link: "https://carlosqsilva.github.io/YASCC/#/",
       tech: ["Preact", "Redux", "React-Router"],
       image: screen
@@ -70,7 +72,8 @@ export const LanguageProject = {
     other: [
       {
         name: "CCharts",
-        description: "Plot quality control charts online",
+        description:
+          "Plot quality control charts on browser, by importing CSV files.",
         link: "https://carlosqsilva.github.io/ccharts-online/",
         tech: ["React", "Redux", "Chartjs"]
       },
