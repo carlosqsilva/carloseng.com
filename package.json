@@ -4,24 +4,25 @@
   "description": "Super site do carlos",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir build --public-url / --no-cache",
+    "start": "parcel index.html --no-cache",
+    "build":
+      "rm -rf ./dist/* && parcel build index.html --public-url / --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carlos Silva <carlosqsilva@outlook.com> (https://carloseng.com/)",
   "license": "MIT",
   "dependencies": {
-    "preact": "^8.2.7",
+    "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-preact": "^1.1.0",
-    "parcel-bundler": "^1.7.0"
+    "parcel-bundler": "^1.8.1"
   },
   "alias": {
     "react": "preact-compat"

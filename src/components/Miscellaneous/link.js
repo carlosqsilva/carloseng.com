@@ -17,7 +17,7 @@ const shimmer = css`
   background-position: 0 0;
   -webkit-background-clip: text;
   background-clip: text;
-  padding-right: 140px;
+  padding-right: 100px;
   color: transparent;
   animation: ${shimmerAnimation} 2s infinite;
 `

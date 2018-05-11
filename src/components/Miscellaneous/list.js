@@ -15,8 +15,8 @@ const Info = styled.span`
   }
 `
 
-export const ListRed = ({ list, ...props }) => (
-  <div>{list.map((item, i) => <Red key={i}>{item}</Red>)}</div>
+export const ListInline = ({ list, ...props }) => (
+  <span>{list.map((item, i) => <Red key={i}>{item}</Red>)}</span>
 )
 
 const Red = styled.span`

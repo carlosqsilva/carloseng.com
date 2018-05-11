@@ -43,9 +43,9 @@ class App extends Component {
   render(_, { language }) {
     return (
       <ThemeProvider theme={theme}>
-        <main style={{ overflow: "hidden" }}>
+        <main style={{ overflowX: "hidden" }}>
           <Toggler lang={language} onClick={this.onclick} />
-          <Home lang={language} onClick={this.onclick} />
+          <Home lang={language} />
           <Projects lang={language} />
           <Footer lang={language} />
         </main>
@@ -60,4 +60,6 @@ if (module.hot) {
   module.hot.accept(function() {
     window.location.reload()
   })
+} else {
+  console.log("%c Oi, tudo bem?", "color: red; font-size: 20px;")
 }

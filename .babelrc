@@ -4,9 +4,9 @@
       "env",
       {
         "modules": false,
-        "useBuiltIns": true,
+        "useBuiltIns": false,
         "targets": {
-          "browsers": ["Chrome >= 60", "Firefox >= 55"]
+          "browsers": ["since 2018"]
         }
       }
     ]

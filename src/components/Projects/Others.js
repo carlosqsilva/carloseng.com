@@ -1,15 +1,15 @@
 import { h } from "preact"
 import styled from "styled-components"
 import { Basic } from "../Miscellaneous/link"
-import { ListRed } from "../Miscellaneous/list"
+import { ListInline } from "../Miscellaneous/list"
 
 const Other = ({ projects }) => (
   <Wrapper>
     {projects.map(({ link, name, description, tech }, i) => (
       <Card href={link}>
         <Title>{name}</Title>
-        <ListRed list={tech} />
-        <Description>{description}</Description>
+        <ListInline list={tech} />
+        <div>{description}</div>
       </Card>
     ))}
   </Wrapper>
@@ -39,9 +39,8 @@ const Title = styled.h3`
   margin-right: 10px;
 `
 
-const Description = styled.p`
-  margin: 0;
-  /* margin-top: 0.8rem; */
-`
+// const Description = styled.p`
+//   margin: 0;
+// `
 
 export default Other

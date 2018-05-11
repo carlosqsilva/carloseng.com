@@ -11,7 +11,7 @@ const Home = ({ lang }) => {
   const { cta, description } = LanguageHero[lang]
   return (
     <Section>
-      <Video autoPlay="true" loop>
+      <Video autoPlay muted loop>
         <source src={videowebm} type="video/webm" />
         <source src={videomp4} type="video/mp4" />
       </Video>
@@ -24,9 +24,7 @@ const Home = ({ lang }) => {
         <Wrapper>
           <Link href="mailto:carlosqsilva@outlook.com">Email</Link>
           <Link href="https://www.linkedin.com/in/carlosqsilva">Linkedin</Link>
-          <Link shimmer href="https://github.com/carlosqsilva">
-            Github
-          </Link>
+          <Link href="https://github.com/carlosqsilva">Github</Link>
         </Wrapper>
       </Container>
       <DividerArrow />
@@ -65,7 +63,7 @@ const Container = styled.div`
 const Greeting = styled.h1`
   position: relative;
   display: inline-block;
-  font-size: calc(2rem + 2vw);
+  font-size: calc(1.8rem + 2vw);
   margin-bottom: 2rem;
   padding-bottom: 15px;
   color: white;

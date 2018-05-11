@@ -45,9 +45,8 @@ const Title = styled.h1`
 `
 
 const Description = styled.p`
-  line-height: 1.7rem;
-  font-size: 1.3rem;
-  /* margin-bottom: 0; */
+  line-height: 1.5em;
+  font-size: 1.1rem;
 `
 
 const Image = styled.img.attrs({

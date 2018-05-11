@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
       {
@@ -13,7 +13,7 @@
         ]
       },
       {
-        "source": "**/*.@(png|svg|webm|mp4|css|js)",
+        "source": "**/*.@(png|svg|webm|mp4|js)",
         "headers": [
           {
             "key": "Cache-Control",

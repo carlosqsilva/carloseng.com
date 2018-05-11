@@ -34,16 +34,13 @@
     *::after {
       padding: 0;
       box-sizing: border-box;
-      backface-visibility: hidden;
       font-family: inherit;
     }
 
     body {
       margin: 0;
-      font-family: 'Space Mono', sans-serif;
-      font-variant-ligatures: no-common-ligatures;
       font-size: 16px;
-      overflow-x: hidden;
+      font-family: 'Space Mono', sans-serif;
     }
 
     #loader.ready {
@@ -60,8 +57,6 @@
       width: 100vw;
       height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
       pointer-events: none;
       transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
       z-index: 9999;
@@ -72,7 +67,7 @@
       height: 100px;
       border-radius: 100%;
       position: relative;
-      margin: 0 auto;
+      margin: auto;
     }
 
     .loader::before,
