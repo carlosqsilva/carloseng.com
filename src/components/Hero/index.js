@@ -6,12 +6,13 @@ import { DividerArrow } from "../Divider"
 import { Link } from "../Miscellaneous/link"
 
 import Background from "../../assets/graph-paper.svg"
+import poster from "../../assets/poster.png"
 
 const Home = ({ lang }) => {
   const { cta, description } = LanguageHero[lang]
   return (
     <Section>
-      <Video autoPlay muted loop>
+      <Video autoPlay muted loop poster={poster}>
         <source src={videowebm} type="video/webm" />
         <source src={videomp4} type="video/mp4" />
       </Video>

@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --no-cache",
-    "build":
-      "rm -rf ./dist/* && parcel build index.html --public-url / --no-cache",
+    "build": "rm -rf ./dist/* && parcel build index.html --public-url / --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carlos Silva <carlosqsilva@outlook.com> (https://carloseng.com/)",
@@ -14,7 +13,7 @@
   "dependencies": {
     "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
-    "styled-components": "^3.2.6"
+    "styled-components": "^3.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

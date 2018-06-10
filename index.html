@@ -18,7 +18,7 @@
   <meta name="author" content="Carlos Henrique Silva">
   <title>Carlos Silva</title>
   <meta name="description" content="Carlos Silva Engenheiro de Produção e Pós-graduando em Engenharia de Software.">
-  <meta name="keywords" content="Carlos, Desenvolvedor, Engenharia, React, Javascript">
+  <meta name="keywords" content="Carlos, Desenvolvedor, Engenharia, React, Preact, Javascript">
   <!-- Facebook Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://carloseng.com">
@@ -27,7 +27,7 @@
   <meta property="og:description" content="Carlos Silva Engenheiro de Produção e Pós-graduando em Engenharia de Software.">
   <meta property="og:site_name" content="Carlos Silva Website">
   <meta property="og:locale" content="pt_BR">
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono:100,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
   <style type="text/css">
     *,
     *::before,
@@ -42,79 +42,13 @@
       font-size: 16px;
       font-family: 'Space Mono', sans-serif;
     }
-
-    #loader.ready {
-      opacity: 0;
-    }
-
-    #loader {
-      background-color: #f5f5f5;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 1;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      pointer-events: none;
-      transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
-      z-index: 9999;
-    }
-
-    .loader {
-      width: 100px;
-      height: 100px;
-      border-radius: 100%;
-      position: relative;
-      margin: auto;
-    }
-
-    .loader::before,
-    .loader::after {
-      content: "";
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 0;
-      left: calc(50% - 10px);
-      background-color: #FF6700;
-      animation: squaremove 1s ease-in-out infinite;
-    }
-
-    .loader::after {
-      bottom: 0;
-      animation-delay: 0.5s;
-    }
-
-    @keyframes squaremove {
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(0);
-      }
-
-      25% {
-        transform: translate(40px, 40px) rotate(45deg);
-      }
-
-      50% {
-        transform: translate(0px, 80px) rotate(0deg);
-      }
-
-      75% {
-        transform: translate(-40px, 40px) rotate(45deg);
-      }
-    }
   </style>
 </head>
 
 <body>
-
-
-  <div id="loader">
-    <div class="loader"></div>
-  </div>
-
+  <noscript>
+    Você precisa ativar o Javascript ;)
+  </noscript>
   <script src="./src/main.js"></script>
 </body>
 

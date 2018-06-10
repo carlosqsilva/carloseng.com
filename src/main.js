@@ -20,20 +20,6 @@ class App extends Component {
     language: "en"
   }
 
-  componentDidMount() {
-    window.addEventListener("load", () => {
-      const ele = document.getElementById("loader")
-      if (ele) {
-        setTimeout(() => {
-          ele.classList.add("ready")
-          setTimeout(() => {
-            ele.outerHTML = ""
-          }, 500)
-        }, 500)
-      }
-    })
-  }
-
   onclick = () => {
     this.setState(prevState => ({
       language: prevState.language === "en" ? "pt" : "en"
