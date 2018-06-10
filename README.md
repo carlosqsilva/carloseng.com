@@ -2,9 +2,9 @@
 
 My personal website made with:
 
-* Preact
-* Css Modules
-* Parcel bundler
+- Preact
+- Styled-Components
+- Parcel bundler
 
 ## License
 
