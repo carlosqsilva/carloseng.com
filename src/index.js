@@ -1,18 +1,19 @@
 import { h, render, Component } from "preact"
 import { ThemeProvider } from "styled-components"
-import Home from "./components/Hero"
-import Projects from "./components/Projects"
-import Footer from "./components/Footer/footer"
-import Toggler from "./components/LangToggler"
+import Home from "@/Hero"
+import Projects from "@/Projects"
+import Footer from "@/Footer"
+import Toggler from "@/LangToggler"
 
 const theme = {
   link: "#097cf3",
   info: "#ebca7d",
-  black: "#111",
+  black: "#121212",
   dark: "#212121",
   red: "#f44336",
   light: "#fafafa",
-  grey: "#eeeeee"
+  grey: "#eeeeee",
+  white: "#ffffff"
 }
 
 class App extends Component {
@@ -42,10 +43,8 @@ class App extends Component {
 
 render(<App />, document.body)
 
-if (module.hot) {
-  module.hot.accept(function() {
-    window.location.reload()
-  })
+if (!PRODUCTION) {
+  require("preact/devtools")
 } else {
   console.log("%c Oi, tudo bem?", "color: red; font-size: 20px;")
 }

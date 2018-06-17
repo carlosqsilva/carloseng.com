@@ -4,26 +4,32 @@
   "description": "Super site do carlos",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --no-cache",
-    "build": "rm -rf ./dist/* && parcel build index.html --public-url / --no-cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-serve ./config/start.js",
+    "build": "webpack --config ./config/build.js --reporter stylish"
   },
   "author": "Carlos Silva <carlosqsilva@outlook.com> (https://carloseng.com/)",
   "license": "MIT",
   "dependencies": {
+    "babel-loader": "^8.0.0-beta.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "styled-components": "^3.3.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-preact": "^1.1.0",
-    "parcel-bundler": "^1.8.1"
-  },
-  "alias": {
-    "react": "preact-compat"
+    "clean-webpack-plugin": "^0.1.19",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "parcel-bundler": "^1.9.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1",
+    "webpack-serve": "^1.0.4"
   }
 }

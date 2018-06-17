@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 764px) {
+  @media screen and (min-width: 800px) {
     flex-direction: row;
   }
 `
@@ -33,20 +33,21 @@ const Wrapper = styled.div`
 const Container = styled.div`
   flex: 1;
 
-  &:not(:last-child) {
-    margin-right: 2rem;
+  @media screen and (min-width: 800px) {
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
   }
 `
 
 const Title = styled.h1`
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 `
 
 const Description = styled.p`
-  line-height: 1.5em;
-  font-size: 1.1rem;
+  font-size: 1rem;
 `
 
 const Image = styled.img.attrs({

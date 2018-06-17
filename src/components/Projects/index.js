@@ -8,7 +8,7 @@ import { LanguageProject } from "../language"
 import { DividerArrow } from "../Divider"
 import { Link } from "../Miscellaneous/link"
 
-import background from "../../assets/project_bg.svg"
+import { bgCircuit } from "&"
 
 const Projects = ({ lang }) => {
   const { last, other } = LanguageProject[lang]
@@ -33,7 +33,7 @@ const Projects = ({ lang }) => {
 }
 
 const Section = styled.section`
-  background: url(${background}), ${props => props.theme.black};
+  background: url(${bgCircuit}), ${props => props.theme.black};
   color: ${props => props.theme.grey};
   padding: 1rem;
   position: relative;
@@ -50,7 +50,7 @@ const Heading = styled.h2`
   padding-bottom: 4px;
   position: relative;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1rem;
 
   &::after {
     content: "";

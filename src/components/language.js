@@ -4,12 +4,12 @@ export const LanguageHero = {
   pt: {
     cta: "Olá estranho",
     description:
-      "Meu nome é Carlos, tenho 24 anos e moro no Pará, Brasil. Sou formado em Engenharia de Produção e atualmente faço Pós-Graduação em Engenharia de Software."
+      "Meu nome é Carlos, moro no Pará, Brasil. Atualmente faço Pós-Graduação em Engenharia de Software."
   },
   en: {
     cta: "Hi there",
     description:
-      "My name is Carlos, i'm 24 years old, and live in Pará, Brazil. I have a bachelor degree in Production Engineering and currently doing a major in software engineering."
+      "My name is Carlos, i live in Pará, Brazil. Currently doing a major in software engineering."
   }
 }
 
@@ -18,7 +18,7 @@ export const LanguageProject = {
     last: {
       name: "YASCC",
       description:
-        "Yet Another SoundCloud Client é um tocador de música feito em Preact e Redux, o mesmo utiliza localStorage através do redux-persist para salvar playlists criadas pelo usuário, outro destaque é o uso de Media Session API para fornecer integração com smartphones androids na tela de bloqueio.",
+        "Yet Another SoundCloud Client é um tocador de música, utiliza localStorage para salvar playlists do usuário, e Media Session API fornecendo integração com smartphones androids.",
       link: "https://carlosqsilva.github.io/YASCC/#/",
       tech: ["Preact", "Redux", "React-Router"],
       image: screen
@@ -64,7 +64,7 @@ export const LanguageProject = {
     last: {
       name: "YASCC",
       description:
-        "Yet Another SoundCloud Client is a music player, built with Preact and Redux, it uses localStorage through redux-persist to persist user created playlist, other highlight is the usage of Media Session API to give a cool integration with Android devices.",
+        "Yet Another SoundCloud Client is a music player, it persist user playlist using localStorage, and Media Session API to give a cool integration with Android devices.",
       link: "https://carlosqsilva.github.io/YASCC/#/",
       tech: ["Preact", "Redux", "React-Router"],
       image: screen

@@ -32,6 +32,7 @@ const Section = styled.footer`
   background: #282b2e;
   color: ${props => props.theme.grey};
   text-align: center;
+  font-size: 16px;
 `
 
 export default Footer

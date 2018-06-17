@@ -14,7 +14,6 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
-  <link rel="shortcut icon" href="./favicon.png">
   <meta name="author" content="Carlos Henrique Silva">
   <title>Carlos Silva</title>
   <meta name="description" content="Carlos Silva Engenheiro de Produção e Pós-graduando em Engenharia de Software.">
@@ -37,9 +36,24 @@
       font-family: inherit;
     }
 
+    html {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: 360px) {
+      html {
+        font-size: calc(16px + 8 * (100vw - 360px)/(840));
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      html {
+        font-size: 24px;
+      }
+    }
+
     body {
       margin: 0;
-      font-size: 16px;
       font-family: 'Space Mono', sans-serif;
     }
   </style>
@@ -49,7 +63,7 @@
   <noscript>
     Você precisa ativar o Javascript ;)
   </noscript>
-  <script src="./src/main.js"></script>
+  <div id="app"></div>
 </body>
 
 </html>

@@ -27,6 +27,7 @@ const Card = Basic.extend`
   color: ${props => props.theme.dark};
   transition: transform 0.2s ease;
   border-radius: 4px;
+  font-size: 16px;
   padding: 10px;
 
   &:hover {

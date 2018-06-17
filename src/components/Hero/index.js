@@ -1,18 +1,15 @@
 import { h } from "preact"
 import styled from "styled-components"
-import { videowebm, videomp4 } from "../../assets"
+import { videowebm, videomp4, videoPoster, bgPaper } from "&"
 import { LanguageHero } from "../language"
 import { DividerArrow } from "../Divider"
 import { Link } from "../Miscellaneous/link"
-
-import Background from "../../assets/graph-paper.svg"
-import poster from "../../assets/poster.png"
 
 const Home = ({ lang }) => {
   const { cta, description } = LanguageHero[lang]
   return (
     <Section>
-      <Video autoPlay muted loop poster={poster}>
+      <Video autoPlay muted loop poster={videoPoster}>
         <source src={videowebm} type="video/webm" />
         <source src={videomp4} type="video/mp4" />
       </Video>
@@ -38,8 +35,12 @@ const Section = styled.section`
   padding: 1rem;
   position: relative;
   height: 98vh;
-  background: linear-gradient(to bottom, transparent 70%, #111),
-    url(${Background});
+  background: linear-gradient(
+      to bottom,
+      transparent 70%,
+      ${props => props.theme.black}
+    ),
+    url(${bgPaper});
   background-size: cover, 200px;
 `
 
@@ -58,16 +59,15 @@ const Video = styled.video`
 const Container = styled.div`
   margin: auto;
   max-width: 1200px;
-  /* z-index: 2; */
 `
 
 const Greeting = styled.h1`
   position: relative;
   display: inline-block;
-  font-size: calc(1.8rem + 2vw);
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   padding-bottom: 15px;
-  color: white;
+  color: ${props => props.theme.white};
 
   &:hover::after {
     width: 100%;
@@ -78,21 +78,20 @@ const Greeting = styled.h1`
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 8px;
-    width: calc(55px + 1vw);
+    height: 0.35rem;
+    width: 3rem;
     display: block;
-    background-color: white;
+    background-color: ${props => props.theme.white};
     will-change: width;
     transition: width 300ms;
   }
 `
 
 const Description = styled.p`
-  font-size: calc(1rem + 1vw);
-  color: white;
+  font-size: 1.2rem;
+  color: ${props => props.theme.white};
   margin: 0;
-  line-height: 1.4em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 `
 
 const Wrapper = styled.div`

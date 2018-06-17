@@ -10,7 +10,12 @@ const shimmerAnimation = keyframes`
 `
 
 const shimmer = css`
-  background: linear-gradient(to right, #097cf3, #fff, #097cf3);
+  background: linear-gradient(
+    to right,
+    ${props => props.theme.link},
+    #fff,
+    ${props => props.theme.link}
+  );
   background-color: ${props => props.theme.link};
   background-repeat: no-repeat;
   background-size: 80px 100%;
@@ -33,13 +38,14 @@ export const Info = Basic.extend`
   color: ${props => props.theme.info};
   align-self: center;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 16px;
 `
 
 export const Link = Info.extend`
-  font-size: calc(1rem + 0.5vw);
+  font-size: 1rem;
   color: ${props => props.theme.link};
   ${props => props.shimmer && shimmer};
+
   & + a {
     margin-left: 20px;
   }
